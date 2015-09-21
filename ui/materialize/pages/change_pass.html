@@ -1,0 +1,19 @@
+<template name="TEMPLATE_NAME">
+		<form id="change_pass_form" class="form" role="form">
+			<h2>Change password</h2>
+
+			{{#if errorMessage}}
+				<div class="alert alert-warning">{{errorMessage}}</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+				<div class="alert alert-success">{{infoMessage}}</div>
+			{{/if}}
+
+			<div class="input-field"><input id="old_password" type="password" placeholder="Your old password" required autofocus></div>
+			<div class="input-field"><input id="new_password" type="password" placeholder="New password" required></div>
+			<div class="input-field"><input id="confirm_pass" type="password" placeholder="Repeat new password" required></div>
+
+			<button class="btn" type="submit" data-loading-text="Please wait...">OK</button>
+		</form>
+</template>
