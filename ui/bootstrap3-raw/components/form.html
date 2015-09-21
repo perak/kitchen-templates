@@ -1,0 +1,216 @@
+<template name="TEMPLATE_NAME">
+	<div class="COMPONENT_CLASS">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left"></span>
+			</a>
+			<span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>
+			COMPONENT_TITLE
+		</h2>
+
+		<form id="form" role="form">
+			{{#if errorMessage}}
+				<div class="alert alert-warning">{{errorMessage}}</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+				<div class="alert alert-success">{{infoMessage}}</div>
+			{{/if}}
+		</form>
+	</div>
+</template>
+
+
+<input id="form-input-hidden" type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
+
+
+<div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<input type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<div class="input-group date">
+			<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+		</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<p class="form-control-static">FIELD_VALUE</p>
+	</div>
+</div>
+
+<div id="form-input-link" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<p class="form-control-static"><a href="FIELD_VALUE">FIELD_VALUE</a></p>
+	</div>
+</div>
+
+<div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<textarea class="form-control" name="FIELD_NAME">FIELD_VALUE</textarea>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-radio" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<div id="form-input-radio-items">
+		</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-radio-item" class="radio">
+	<label>
+		<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
+		ITEM_TITLE
+	</label>
+</div>
+
+<div id="form-input-checkbox" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<div id="form-input-checkbox-items">
+		</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-checkbox-item" class="checkbox">
+	<label>
+		<input type="checkbox" value="ITEM_VALUE" name="FIELD_NAME">
+		ITEM_TITLE
+	</label>
+</div>
+
+<div id="form-input-select" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<select class="form-control" name="FIELD_NAME">
+		</select>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<option id="form-input-select-item" value="ITEM_VALUE">
+	ITEM_TITLE
+</option>
+
+<div id="form-input-select-multiple" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<select multiple="multiple" class="form-control" name="FIELD_NAME">
+		</select>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<option id="form-input-select-multiple-item" value="ITEM_VALUE">
+	ITEM_TITLE
+</option>
+
+<div id="form-input-tags" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<select multiple="multiple" data-role="tagsinput" class="form-control" name="FIELD_NAME">
+			{{#each getArray FIELD_VALUE}}
+			<option id="form-input-tags-item" value="{{this}}">
+				{{this}}
+			</option>
+			{{/each}}
+		</select>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>
+
+<div id="form-input-submit" class="form-group">
+	<div class="submit-div">
+		<button id="form-submit-button" class="btn btn-success" type="submit">
+			<span class="fa fa-check"></span>
+			Save
+		</button>
+		<a href="#" id="form-cancel-button" class="btn btn-default">
+			Cancel
+		</a>
+		<a href="#" id="form-close-button" class="btn btn-primary">
+			OK
+		</a>
+	</div>
+</div>
+
+<div id="form-input-crud" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<table class="table table-striped">
+			<thead>
+				<tr class="crud-table-controls">
+					<td colspan="CRUD_FIELD_COUNT">
+						<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><span class="fa fa-plus"></span> CRUD_INSERT_BUTTON_TITLE</button>
+					</td>
+				</tr>
+				{{#if FIELD_CRUD_ITEMS}}
+					<tr class="crud-table-header">
+					</tr>
+				{{/if}}
+			</thead>
+
+			<tbody>
+				{{#each FIELD_CRUD_ITEMS}}
+					<tr class="crud-table-row">
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+
+	<div class="modal crud-insert-form-container" id="CRUD_INSERT_FORM_CONTAINER_ID" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form-input-file" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<input type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
+		<input type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+</div>

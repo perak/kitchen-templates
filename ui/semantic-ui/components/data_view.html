@@ -1,0 +1,54 @@
+<template name="TEMPLATE_NAME">
+	<div id="dataview" class="COMPONENT_CLASS">
+		<legend><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</legend>
+
+		<form class="ui form">
+			<div id="dataview-controls" class="ui secondary menu">
+			</div>
+		</form>
+
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+				<div class="alert alert-warning">TEXT_IF_NOT_FOUND</div>
+			{{else}}
+				<div id="dataview-data">
+				</div>
+			{{/if}}
+		{{else}}
+			<div class="alert alert-info">TEXT_IF_EMPTY</div>
+		{{/if}}
+	</div>
+</template>
+
+<div id="dataview-controls-insert" class="item INSERT_BUTTON_CLASS">
+	<div  id="dataview-insert-button" class="ui inverted blue button"><i class="plus icon"></i>INSERT_BUTTON_TITLE</div>
+</div>
+
+<div id="dataview-controls-search"  class="item">
+	{{#if isNotEmpty}}
+	<div class="ui icon input" style="min-width: 150px;">
+  <input id="dataview-search-input" style="margin-bottom:0px;" type="text" placeholder="Search...">
+  <i id="dataview-search-button" class="circular search icon"></i>
+</div>
+	{{/if}}
+</div>
+
+<div id="dataview-controls-export" class="item">
+	{{#if isNotEmpty}}
+		{{#if isFound}}
+			<div></div>
+		{{else}}
+
+		<div class="ui floating labeled icon dropdown basic button">
+    <i class="angle down icon"></i>
+		<span class="text">Export</span>
+      <div class="menu">
+        <div id="dataview-export-csv" class="item"><i class="edit icon"></i>Export to CSV</div>
+        <div id="dataview-export-tsv" class="item"><i class="delete icon"></i>Export to TSV</div>
+        <div id="dataview-export-json" class="item"><i class="hide icon"></i>Export to JSON</div>
+      </div>
+  </div>
+
+		{{/if}}
+	{{/if}}
+</div>

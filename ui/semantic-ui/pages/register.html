@@ -1,0 +1,29 @@
+<template name="TEMPLATE_NAME">
+	<div class="ui two column centered grid">
+		<div class="column">
+		{{#if verificationEmailSent}}
+			<div class="ui segment">
+				<h2>Thanks for signing up!</h2>
+				<p>We've sent verification link to your e-mail address.</p>
+				<br />
+				<button class="ui primary button go-home" type="button" data-loading-text="Please wait...">OK</button>
+			</div>
+		{{else}}
+			<form id="register_form" class="ui large form" role="form">
+				<h2>Please sign up</h2>
+
+				{{#if errorMessage}}
+					<div class="alert alert-warning">{{errorMessage}}</div>
+				{{/if}}
+
+				<div class="ui input"><input id="register_name" type="text" placeholder="Your full name" required autofocus></div>
+				<div class="ui input"><input id="register_email" type="text"  placeholder="Email address" required></div>
+				<div class="ui input"><input  id="register_password" type="password" placeholder="Password" required></div>
+
+				<button class="fluid ui primary button" type="submit" data-loading-text="Please wait...">Sign up</button>
+				<p class="account-form-text-after">Already a member? <a href="{{pathFor 'login'}}">Sign in here</a></p>
+			</form>
+		{{/if}}
+	</div>
+</div>
+</template>

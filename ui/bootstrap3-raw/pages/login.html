@@ -1,0 +1,27 @@
+<template name="TEMPLATE_NAME">
+	<div class="container">
+		<form id="login_form" class="account-form" role="form">
+			<h2>Please sign in</h2>
+
+			{{#if errorMessage}}
+				<div class="alert alert-warning">{{errorMessage}}</div>
+			{{/if}}
+
+			<button id="login-with-google" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-google-plus-square"></span>&nbsp;Sign in with Google</button>
+			<button id="login-with-github" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-github"></span>&nbsp;Sign in with GitHub</button>
+			<button id="login-with-facebook" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-facebook-official"></span>&nbsp;Sign in with Facebook</button>
+			<button id="login-with-twitter" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-twitter"></span>&nbsp;Sign in with Twitter</button>
+			<button id="login-with-linkedin" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-linkedin-square"></span>&nbsp;Sign in with LinkedIn</button>
+			<button id="login-with-meteor" type="button" class="btn btn-default btn-block" data-loading-text="Please wait..."><span class="fa fa-meteor"></span>&nbsp;Sign in with Meteor</button>
+
+			<div id="login-with-password" style="padding-top: 10px;">
+				<input id="login_email" type="text" class="form-control" placeholder="Email address" required autofocus>
+				<input id="login_password" type="password" class="form-control" placeholder="Password" required>
+
+				<button class="btn btn-lg btn-primary btn-block" type="submit" data-loading-text="Please wait...">Sign in</button>
+				<p class="account-form-text-after" id="register-link">Not a member? <a href="{{pathFor 'register'}}">Sign up here</a></p>
+				<p class="account-form-text-after" id="forgot-password-link">Forgot password? <a href="{{pathFor 'forgot_password'}}">Click here</a></p>
+			</div>
+		</form>
+	</div>
+</template>
