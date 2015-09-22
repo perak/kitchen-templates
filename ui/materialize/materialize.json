@@ -1,0 +1,9 @@
+{
+	"packages": {
+		"meteor": ["materialize:materialize@=0.97.0"],
+		"mrt"   : []
+	},
+	"copy_files": [
+		{ "source": "TEMPLATE_UI_DIR/materialize/", "dest": "CLIENT_STYLES_FRAMEWORK_DIR/materialize/" }
+	]
+}

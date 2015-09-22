@@ -1,0 +1,9 @@
+{
+	"packages": {
+		"meteor": ["mrt:moment", "rajit:bootstrap3-datepicker", "reactive-dict"],
+		"mrt"   : []
+	},
+	"copy_files": [
+		{ "source": "TEMPLATE_CODE_DIR/form_utils.js", "dest": "CLIENT_LIB_DIR/form_utils.js" }
+	]
+}

@@ -1,0 +1,173 @@
+<template name="TEMPLATE_NAME">
+	<div class="COMPONENT_CLASS">
+		<div id="form-back-button" class="btn"><i class="material-icons">reply</i>Back</div>
+
+		<h4><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h4>
+
+		<form id="form" class="form form_TEMPLATE_NAME" role="form">
+			{{#if errorMessage}}
+				<div class="alert alert-warning">{{errorMessage}}</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+				<div class="alert alert-success">{{infoMessage}}</div>
+			{{/if}}
+		</form>
+	</div>
+</template>
+
+
+<input id="form-input-hidden" type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
+
+<div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<div class="input-field">
+		<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+	</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+
+<div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<div class="input-field">
+		<input  type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+	</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<div class="input-field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<i class="material-icons prefix">event_note</i>
+		<input  type="text" name="FIELD_NAME" value="FIELD_VALUE">
+	</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	     <div class="input-field">
+          <input readonly id="FIELD_NAME" value="FIELD_VALUE" type="text">
+          <label for="FIELD_NAME">FIELD_TITLE</label>
+        </div>
+</div>
+
+
+<div id="form-input-markdown" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+    <label for="FIELD_NAME">FIELD_TITLE</label>
+    <div class="input-field">
+        <textarea class="materialize-textarea" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
+    </div>
+        <span id="help-text" class="help-block"></span>
+        <span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<div class="input-field">
+		<textarea class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+	</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-radio" class="inline fields form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+		<div id="form-input-radio-items">
+		</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-radio-item" class="field">
+	<div class="ui radio checkbox">
+	<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	</div>
+</div>
+
+<div id="form-input-checkbox" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+	<div class="input-field">
+		<div id="form-input-checkbox-items">
+		</div>
+	</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<div id="form-input-checkbox-item" class="ui checkbox">
+		<input type="checkbox" value="ITEM_VALUE" name="FIELD_NAME">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+</div>
+
+<div id="form-input-select" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+		<select class="dropdown" name="FIELD_NAME">
+			<option value="" disabled selected>Choose FIELD_TITLE</option>
+		</select>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+</div>
+
+<option id="form-input-select-item" value="ITEM_VALUE">
+	ITEM_TITLE
+</option>
+
+<div id="form-input-submit" class="">
+	<div class="submit-div">
+		<button id="form-submit-button" class="btn submitbtn" type="submit"> <i class="material-icons">check</i> Save </button>
+		<a href="#" id="form-cancel-button" class="btn"> Cancel </a>
+		<a href="#" id="form-close-button" class="btn green"> OK </a>
+	</div>
+</div>
+
+<div id="form-input-crud" class="FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-div">
+		<table class="table table-striped">
+			<thead>
+				<tr class="crud-table-controls">
+					<td colspan="CRUD_FIELD_COUNT">
+						<button type="button" class="btn" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><i class="materialize-icons">control_point</i> CRUD_INSERT_BUTTON_TITLE</button>
+					</td>
+				</tr>
+				{{#if FIELD_CRUD_ITEMS}}
+					<tr class="crud-table-header">
+					</tr>
+				{{/if}}
+			</thead>
+
+			<tbody>
+				{{#each FIELD_CRUD_ITEMS}}
+					<tr class="crud-table-row">
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
+	</div>
+
+	<div class="modal crud-insert-form-container" id="CRUD_INSERT_FORM_CONTAINER_ID" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form-input-file" class="form-group FIELD_GROUP_CLASS FIELD_ID">
+    <div class="input-field">
+    <label for="FIELD_NAME">FIELD_TITLE</label>
+    <div class="input-div">
+        <input type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
+        <input type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
+    </div>
+        <span id="help-text" class="help-block"></span>
+        <span id="error-text" class="help-block"></span>
+	</div>
+</div>
