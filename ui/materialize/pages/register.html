@@ -9,6 +9,7 @@
 				<button class="btn go-home" type="button" data-loading-text="Please wait...">OK</button>
 			</div>
 		{{else}}
+			<div class="container">
 			<form id="register_form" class="form" role="form">
 				<h2>Please sign up</h2>
 
@@ -32,6 +33,7 @@
 				<div class="field"><button class="btn" type="submit" data-loading-text="Please wait...">Sign up</button></div>
 				<p class="account-form-text-after">Already a member? <a href="{{pathFor 'login'}}">Sign in here</a></p>
 			</form>
+		</div>
 		{{/if}}
 	</div>
 </div>

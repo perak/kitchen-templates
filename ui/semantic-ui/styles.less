@@ -1,5 +1,5 @@
 @navbar_height: 50px;
-@footer_height: 150px;
+@footer_height: 50px;
 
 .sticky-wrapper {
 	padding-bottom: @footer_height;
@@ -10,7 +10,14 @@
 	height: @navbar_height;
 }
 
-.sticky-footer,
+.sticky-footer{
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
 .ui.segment.sticky-footer {
 	position: relative;
 	margin-top: -(@footer_height);
@@ -24,6 +31,7 @@
 .ui.header.page-header:first-child {
 	margin-top: 0.5em;
 }
+
 .max-400{
 	max-width:400px;
 }
@@ -31,9 +39,11 @@
 .ui.form .ui.input > input {
     margin-bottom: 3px;
 }
+
 select {
     margin-bottom: 3px;
 }
+
 #error-text{
 	color:red;
 }
@@ -51,4 +61,7 @@ select {
 	display: inline-block;
 	width: 100%;
 	margin: 0.5em 0 0 0;
+}
+.ui.grid > .column:not(.row) {
+    padding-bottom: 0rem;
 }
