@@ -33,5 +33,6 @@ this.CONTROLLER_NAME = RouteController.extend({
 	},
 
 	onAfterAction: function() {
+		/*AFTER_FUNCTION*/
 	}
 });

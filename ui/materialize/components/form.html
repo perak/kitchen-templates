@@ -1,10 +1,10 @@
 <template name="TEMPLATE_NAME">
-	<div class="COMPONENT_CLASS">
+	<div id="COMPONENT_ID" class="container COMPONENT_CLASS">
 		<div id="form-back-button" class="btn"><i class="material-icons">reply</i>Back</div>
 
 		<h4><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h4>
 
-		<form id="form" class="form form_TEMPLATE_NAME" role="form">
+		<form class="form form_TEMPLATE_NAME" role="form">
 			{{#if errorMessage}}
 				<div class="alert alert-warning">{{errorMessage}}</div>
 			{{/if}}
@@ -22,7 +22,7 @@
 <div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field">
 		<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
-		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
 		<span id="help-text" class="help-block"></span>
 		<span id="error-text" class="help-block"></span>
@@ -31,8 +31,8 @@
 
 <div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field">
-		<input  type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
-		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<input type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
 		<span id="help-text" class="help-block"></span>
 		<span id="error-text" class="help-block"></span>
@@ -40,7 +40,7 @@
 
 <div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field">
-		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 		<i class="material-icons prefix">event_note</i>
 		<input  type="text" name="FIELD_NAME" value="FIELD_VALUE">
 	</div>
@@ -51,7 +51,7 @@
 <div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	     <div class="input-field">
           <input readonly id="FIELD_NAME" value="FIELD_VALUE" type="text">
-          <label for="FIELD_NAME">FIELD_TITLE</label>
+					<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
         </div>
 </div>
 
@@ -68,14 +68,14 @@
 <div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field">
 		<textarea class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
-		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
 		<span id="help-text" class="help-block"></span>
 		<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-radio" class="inline fields form-group FIELD_GROUP_CLASS FIELD_ID">
-	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 		<div id="form-input-radio-items">
 		</div>
 		<span id="help-text" class="help-block"></span>
@@ -85,7 +85,7 @@
 <div id="form-input-radio-item" class="field">
 	<div class="ui radio checkbox">
 	<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
-	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
 </div>
 
@@ -100,7 +100,7 @@
 
 <div id="form-input-checkbox-item" class="ui checkbox">
 		<input type="checkbox" value="ITEM_VALUE" name="FIELD_NAME">
-		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 </div>
 
 <div id="form-input-select" class="form-group FIELD_GROUP_CLASS FIELD_ID">
@@ -116,15 +116,15 @@
 </option>
 
 <div id="form-input-submit" class="">
-	<div class="submit-div">
-		<button id="form-submit-button" class="btn submitbtn" type="submit"> <i class="material-icons">check</i> Save </button>
-		<a href="#" id="form-cancel-button" class="btn"> Cancel </a>
-		<a href="#" id="form-close-button" class="btn green"> OK </a>
+	<div class="input-field submit-div">
+		<button id="form-submit-button" class="btn submitbtn" type="submit"> <i class="material-icons">check</i> SUBMIT_BUTTON_TITLE </button>
+		<a href="#" id="form-cancel-button" class="btn"> CANCEL_BUTTON_TITLE </a>
+		<a href="#" id="form-close-button" class="btn green"> CLOSE_BUTTON_TITLE </a>
 	</div>
 </div>
 
 <div id="form-input-crud" class="FIELD_GROUP_CLASS FIELD_ID">
-	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<label class="active" for="FIELD_NAME">FIELD_TITLE</label>
 	<div class="input-div">
 		<table class="table table-striped">
 			<thead>

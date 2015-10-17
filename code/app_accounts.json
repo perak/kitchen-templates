@@ -1,6 +1,6 @@
 {
 	"packages": {
-		"meteor": ["standard-app-packages", "accounts-base", "http", "email", "spiderable", "iron:router", "natestrauser:font-awesome", "matb33:collection-hooks", "perak:user-roles", "copleykj:livestamp"],
+		"meteor": ["accounts-base", "http", "email", "spiderable", "ejson", "random", "iron:router", "natestrauser:font-awesome", "matb33:collection-hooks", "perak:user-roles", "copleykj:livestamp"],
 		"mrt"   : []
 	},
 	"copy_files": [

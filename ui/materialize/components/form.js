@@ -110,5 +110,6 @@ Template.TEMPLATE_NAME.helpers({
 	"errorMessage": function() {
 		return pageSession.get("ERROR_MESSAGE_VAR");
 	}
+
 	/*HELPERS_CODE*/
 });
