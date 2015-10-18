@@ -1,10 +1,10 @@
 <template name="TEMPLATE_NAME">
-	<div class="COMPONENT_CLASS">
+	<div id="COMPONENT_ID" class="COMPONENT_CLASS">
 		<div id="form-back-button" class="ui left labeled icon button"><i class="left arrow icon"></i>Back</div>
 
 		<h4 class="ui dividing header"><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h4>
 
-		<form id="form" class="ui form form_TEMPLATE_NAME" role="form">
+		<form class="ui form form_TEMPLATE_NAME" role="form">
 			{{#if errorMessage}}
 				<div class="alert alert-warning">{{errorMessage}}</div>
 			{{/if}}
@@ -113,9 +113,9 @@
 
 <div id="form-input-submit" class="">
 	<div class="submit-div">
-		<button id="form-submit-button" class="ui blue icon button submitbtn" type="submit"> <span class="fa fa-check"></span> Save </button>
-		<a href="#" id="form-cancel-button" class="ui red button"> Cancel </a>
-		<a href="#" id="form-close-button" class="ui green button"> OK </a>
+		<button id="form-submit-button" class="ui blue icon button submitbtn" type="submit"> <span class="fa fa-check"></span> SUBMIT_BUTTON_TITLE </button>
+		<a href="#" id="form-cancel-button" class="ui red button"> CANCEL_BUTTON_TITLE </a>
+		<a href="#" id="form-close-button" class="ui green button"> CLOSE_BUTTON_TITLE </a>
 	</div>
 </div>
 

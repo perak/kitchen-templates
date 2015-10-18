@@ -2,30 +2,29 @@
   <div id="menu"></div>
   <div class="ui pusher">
     <div class="ui topbar">
-      <div class="ui three column grid">
-
-        <div class="left floated column">
-          <div id="l_menu_btn" class="ui labeled left attached large blue icon button">
-            <i class="align justify icon"></i>Menu
+      <div class="ui grid">
+        <div class="two wide blue column">
+          <div id="l_menu_btn" class="ui large blue icon button">
+            <i class="align justify icon">
+            </i>
           </div>
         </div>
-        <div class="center aligned column">
+        <div class="twelve wide blue center aligned column">
           APP_TITLE
         </div>
-        <div class="right aligned column">
-          <div id="r_menu_btn" class="ui right labeled right attached large orange icon button">
-            <i class="lock icon"></i>Menu
+        <div class="two wide blue right aligned column">
+          <div id="r_menu_btn" class="ui large blue icon button">
+            <i class="lock icon">
+            </i>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="ui hidden divider"></div>
 
     {{> yield}}
 
-    <div id="footer">
-      <div class="footer-container">
-        <p class="text-muted">FOOTER_TEXT</p>
-      </div>
-    </div>
   </div>
+  <div id="footer" class="sticky-footer">FOOTER_TEXT</div>
 </template>
