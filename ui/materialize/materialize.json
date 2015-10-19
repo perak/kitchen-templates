@@ -1,6 +1,6 @@
 {
 	"packages": {
-		"meteor": ["materialize:materialize@=0.97.0"],
+		"meteor": ["materialize:materialize@=0.97.0", "flemay:less-autoprefixer"],
 		"mrt"   : []
 	},
 	"copy_files": [

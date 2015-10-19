@@ -1,6 +1,6 @@
 <template name="TEMPLATE_NAME">
 	<div id="COMPONENT_ID" class="container COMPONENT_CLASS">
-		<div id="form-back-button" class="btn"><i class="material-icons">reply</i>Back</div>
+		<div id="form-back-button" class="waves-effect waves-light btn"><i class="material-icons left">reply</i>Back</div>
 
 		<h4><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h4>
 
@@ -20,7 +20,7 @@
 <input id="form-input-hidden" type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
 
 <div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field">
+	<div class="input-field col s12">
 		<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
@@ -30,7 +30,7 @@
 
 
 <div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field">
+	<div class="input-field col s12">
 		<input type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
@@ -39,7 +39,7 @@
 </div>
 
 <div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field">
+	<div class="input-field col s12">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 		<i class="material-icons prefix">event_note</i>
 		<input  type="text" name="FIELD_NAME" value="FIELD_VALUE">
@@ -49,7 +49,7 @@
 </div>
 
 <div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	     <div class="input-field">
+	     <div class="input-field col s12">
           <input readonly id="FIELD_NAME" value="FIELD_VALUE" type="text">
 					<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
         </div>
@@ -58,7 +58,7 @@
 
 <div id="form-input-markdown" class="form-group FIELD_GROUP_CLASS FIELD_ID">
     <label for="FIELD_NAME">FIELD_TITLE</label>
-    <div class="input-field">
+    <div class="input-field col s12">
         <textarea class="materialize-textarea" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
     </div>
         <span id="help-text" class="help-block"></span>
@@ -66,7 +66,7 @@
 </div>
 
 <div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field">
+	<div class="input-field col s12">
 		<textarea class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
 	</div>
@@ -75,7 +75,7 @@
 </div>
 
 <div id="form-input-radio" class="inline fields form-group FIELD_GROUP_CLASS FIELD_ID">
-	<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+	<label for="FIELD_NAME">FIELD_TITLE</label>
 		<div id="form-input-radio-items">
 		</div>
 		<span id="help-text" class="help-block"></span>
@@ -84,13 +84,13 @@
 
 <div id="form-input-radio-item" class="field">
 	<div class="ui radio checkbox">
-	<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
-	<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+	<input id="radio-ITEM_VALUE" type="radio" value="ITEM_VALUE" group="FIELD_NAME" name="FIELD_NAME">
+	<label for="radio-ITEM_VALUE">ITEM_TITLE</label>
 	</div>
 </div>
 
 <div id="form-input-checkbox" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field">
+	<div class="input-field col s12">
 		<div id="form-input-checkbox-items">
 		</div>
 	</div>
@@ -115,11 +115,11 @@
 	ITEM_TITLE
 </option>
 
-<div id="form-input-submit" class="">
-	<div class="input-field submit-div">
-		<button id="form-submit-button" class="btn submitbtn" type="submit"> <i class="material-icons">check</i> SUBMIT_BUTTON_TITLE </button>
-		<a href="#" id="form-cancel-button" class="btn"> CANCEL_BUTTON_TITLE </a>
-		<a href="#" id="form-close-button" class="btn green"> CLOSE_BUTTON_TITLE </a>
+<div id="form-input-submit">
+	<div class="input-field col s12 submit-div">
+		<button id="form-submit-button" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">check</i>SUBMIT_BUTTON_TITLE</button>
+		<a href="#" id="form-cancel-button" class="btn">CANCEL_BUTTON_TITLE</a>
+		<a href="#" id="form-close-button" class="btn green">CLOSE_BUTTON_TITLE</a>
 	</div>
 </div>
 
@@ -130,7 +130,7 @@
 			<thead>
 				<tr class="crud-table-controls">
 					<td colspan="CRUD_FIELD_COUNT">
-						<button type="button" class="btn" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><i class="materialize-icons">control_point</i> CRUD_INSERT_BUTTON_TITLE</button>
+						<button type="button" class="btn" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><i class="materialize-icons left">control_point</i> CRUD_INSERT_BUTTON_TITLE</button>
 					</td>
 				</tr>
 				{{#if FIELD_CRUD_ITEMS}}
@@ -161,7 +161,7 @@
 </div>
 
 <div id="form-input-file" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-    <div class="input-field">
+    <div class="input-field col s12">
     <label for="FIELD_NAME">FIELD_TITLE</label>
     <div class="input-div">
         <input type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">

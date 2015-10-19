@@ -3,12 +3,17 @@
       </ul>
 </template>
 
-<li id="menu-item-simple" class=""><a href="ITEM_LINK" class="ITEM_CLASS"><i class="material-icons">ICON_CLASS</i>ITEM_TITLE</a></li>
+<li id="menu-item-simple"><a class="ITEM_CLASS" href="ITEM_LINK"><i class="material-icons left">ICON_CLASS</i>ITEM_TITLE</a></li>
 
-<select id="menu-item-dropdown" class="dropdown-button btn" data-activates="menu-items">
-	<ul id="menu-items" class="dropdown-content">
+<li id="menu-item-dropdown" class="ITEM_CLASS">
+  <li><a class="dropdown-button" href="#!" data-activates="menu-dropdown">ITEM_TITLE<i class="material-icons right">arrow_drop_down</i></a></li>
+  <div id="menu-dropdown" class="dropdown-content">
+  <ul id="menu-items">
 	</ul>
-</select>
+</div>
+</li>
+
+
 
 <li id="menu-item-collapse" class="menu-item-collapse ITEM_CLASS">
 	<a href="#ITEM_ID" class="dropdown-toggle" data-toggle="collapse"><i id="item-icon" class="ICON_CLASS"></i>ITEM_TITLE <b class="caret"></b></a>

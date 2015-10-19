@@ -1,4 +1,5 @@
 Template.TEMPLATE_NAME.rendered = function() {
+	$(".dropdown-button").dropdown();
 	/*TEMPLATE_RENDERED_CODE*/
 };
 
