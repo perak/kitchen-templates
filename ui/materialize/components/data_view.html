@@ -20,13 +20,15 @@
 	</div>
 </template>
 
-<div id="dataview-controls-insert" class="item col s4 INSERT_BUTTON_CLASS">
-	<div  id="dataview-insert-button" class="btn"><i class="material-icons">control_point</i>INSERT_BUTTON_TITLE</div>
+<div id="dataview-controls-insert" class="item col s2 INSERT_BUTTON_CLASS">
+	<div class="input-field col s12">
+	<div  id="dataview-insert-button" class="btn"><i class="material-icons left">control_point</i>INSERT_BUTTON_TITLE</div>
+</div>
 </div>
 
 <div id="dataview-controls-search"  class="item col s4">
 	{{#if isNotEmpty}}
-		<div class="input-field">
+		<div class="input-field col s12">
 				<i id="dataview-search-button" class="material-icons prefix">search</i>
 				<input id="dataview-search-input" style="margin-bottom:0px;" type="text">
 				<label for="dataview-search-input">Search</label>
