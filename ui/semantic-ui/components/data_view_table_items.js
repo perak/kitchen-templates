@@ -29,14 +29,14 @@ Template.TEMPLATE_NAME.events({
 		e.preventDefault();
 		var me = this;
 		$('.ui.small.modal.delete').modal({
-	    closable  : true,
-	    onDeny    : function(){
-	      return true;
-	    },
-	    onApprove : function() {
+			closable: true,
+			onDeny: function() {
+				return true;
+			},
+			onApprove: function() {
 				COLLECTION_VAR.remove({ _id: me._id });
-	    }
-	  }).modal('show');
+			}
+		}).modal('show');
 
 		return false;
 	},

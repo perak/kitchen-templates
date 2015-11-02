@@ -1,5 +1,5 @@
 <template name="TEMPLATE_NAME">
-	<div class="COMPONENT_CLASS">
+	<div id="COMPONENT_ID" class="COMPONENT_CLASS">
 		<h2 id="component-title">
 			<a href="#" id="form-back-button" class="btn btn-default" title="back">
 				<span class="fa fa-chevron-left"></span>
@@ -8,7 +8,7 @@
 			COMPONENT_TITLE
 		</h2>
 
-		<form id="form" role="form">
+		<form role="form">
 			{{#if errorMessage}}
 				<div class="alert alert-warning">{{errorMessage}}</div>
 			{{/if}}
@@ -157,13 +157,13 @@
 	<div class="submit-div">
 		<button id="form-submit-button" class="btn btn-success" type="submit">
 			<span class="fa fa-check"></span>
-			Save
+			SUBMIT_BUTTON_TITLE
 		</button>
 		<a href="#" id="form-cancel-button" class="btn btn-default">
-			Cancel
+			CANCEL_BUTTON_TITLE
 		</a>
 		<a href="#" id="form-close-button" class="btn btn-primary">
-			OK
+			CLOSE_BUTTON_TITLE
 		</a>
 	</div>
 </div>

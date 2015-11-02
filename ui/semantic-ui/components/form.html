@@ -1,16 +1,16 @@
 <template name="TEMPLATE_NAME">
 	<div id="COMPONENT_ID" class="COMPONENT_CLASS">
-		<div id="form-back-button" class="ui left labeled icon button"><i class="left arrow icon"></i>Back</div>
+		<div id="form-back-button" class="ui basic button"><i class="chevron left icon"></i>Back</div>
 
-		<h4 class="ui dividing header"><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h4>
+		<h2 class="ui header"><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h2>
 
-		<form class="ui form form_TEMPLATE_NAME" role="form">
+		<form class="ui form" role="form">
 			{{#if errorMessage}}
-				<div class="alert alert-warning">{{errorMessage}}</div>
+				<div class="ui visible warning message">{{errorMessage}}</div>
 			{{/if}}
 
 			{{#if infoMessage}}
-				<div class="alert alert-success">{{infoMessage}}</div>
+				<div class="ui visible positive message">{{infoMessage}}</div>
 			{{/if}}
 		</form>
 	</div>
@@ -20,78 +20,82 @@
 <input id="form-input-hidden" type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
 
 <div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="ui input">
+	<div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
 		<input placeholder="FIELD_TITLE" type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
 </div>
 
 
 <div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="ui input">
+	<div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
 		<input  placeholder="FIELD_TITLE" type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
 </div>
 
 <div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="ui icon input">
+	<div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<div class="ui icon input">
 			<input  placeholder="FIELD_TITLE" type="text" name="FIELD_NAME" value="FIELD_VALUE">
 			<i class="circular icon calendar"></i>
+		</div>
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
 </div>
 
-<div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="two fields">
-	 <div class="field"><label for="FIELD_NAME">FIELD_TITLE : </label></div><div class="field"><b>FIELD_VALUE</b></div>
+<div id="form-input-read-only" class="form-group read-only-field FIELD_GROUP_CLASS FIELD_ID">
+	<div class="fields">
+		 <div class="four wide field"><label for="FIELD_NAME">FIELD_TITLE</label></div>
+		 <div class="twelve wide field"><p>FIELD_VALUE</p></div>
+	</div>
 </div>
-</div>
-
 
 <div id="form-input-markdown" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-    <label for="FIELD_NAME">FIELD_TITLE</label>
-    <div class="input-div">
-        <textarea class="form-control" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
+    <div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<textarea class="form-control" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
     </div>
-        <span id="help-text" class="help-block"></span>
-        <span id="error-text" class="help-block"></span>
+    <span id="help-text" class="help-block"></span>
 </div>
 
 <div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<label>FIELD_TITLE</label>
-	<div class="ui input">
+	<div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
 		<textarea name="FIELD_NAME">FIELD_VALUE</textarea>
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
 </div>
 
-<div id="form-input-radio" class="inline fields form-group FIELD_GROUP_CLASS FIELD_ID">
-	<label for="FIELD_NAME">FIELD_TITLE : </label>
-		<div id="form-input-radio-items">
-		</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+<div id="form-input-radio" class="grouped fields form-group FIELD_GROUP_CLASS FIELD_ID">
+	<label for="FIELD_NAME">FIELD_TITLE</label>
+	<div id="form-input-radio-items"></div>
+	<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
+	<span id="help-text" class="help-block"></span>
 </div>
 
 <div id="form-input-radio-item" class="field">
 	<div class="ui radio checkbox">
-	<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
-	<label>ITEM_TITLE</label>
-</div>
+		<input type="radio" value="ITEM_VALUE" name="FIELD_NAME">
+		<label>ITEM_TITLE</label>
+	</div>
 </div>
 
 <div id="form-input-checkbox" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="ui input">
+	<div class="field">
 		<div id="form-input-checkbox-items">
 		</div>
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
 </div>
 
 <div id="form-input-checkbox-item" class="ui checkbox">
@@ -100,11 +104,11 @@
 </div>
 
 <div id="form-input-select" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-		<select class="ui fluid dropdown" name="FIELD_NAME">
-			<option value="" disabled selected>Choose FIELD_TITLE</option>
-		</select>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<select class="ui fluid dropdown" name="FIELD_NAME">
+		<option value="" disabled selected>Choose FIELD_TITLE</option>
+	</select>
+	<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
+	<span id="help-text" class="help-block"></span>
 </div>
 
 <option id="form-input-select-item" value="ITEM_VALUE">
@@ -113,9 +117,9 @@
 
 <div id="form-input-submit" class="">
 	<div class="submit-div">
-		<button id="form-submit-button" class="ui blue icon button submitbtn" type="submit"> <span class="fa fa-check"></span> SUBMIT_BUTTON_TITLE </button>
-		<a href="#" id="form-cancel-button" class="ui red button"> CANCEL_BUTTON_TITLE </a>
-		<a href="#" id="form-close-button" class="ui green button"> CLOSE_BUTTON_TITLE </a>
+		<button id="form-submit-button" class="ui green icon button submitbtn" type="submit"> <span class="fa fa-check"></span> SUBMIT_BUTTON_TITLE </button>
+		<a href="#" id="form-cancel-button" class="ui basic button"> CANCEL_BUTTON_TITLE </a>
+		<a href="#" id="form-close-button" class="ui blue button"> CLOSE_BUTTON_TITLE </a>
 	</div>
 </div>
 
@@ -142,8 +146,8 @@
 				{{/each}}
 			</tbody>
 		</table>
+		<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
 		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
 	</div>
 
 	<div class="modal crud-insert-form-container" id="CRUD_INSERT_FORM_CONTAINER_ID" tabindex="-1" role="dialog" aria-hidden="true">
@@ -157,13 +161,13 @@
 </div>
 
 <div id="form-input-file" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-    <div class="ui input">
-    <label for="FIELD_NAME">FIELD_TITLE</label>
-    <div class="input-div">
-        <input placeholder="FIELD_TITLE" type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
-        <input type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
-    </div>
-        <span id="help-text" class="help-block"></span>
-        <span id="error-text" class="help-block"></span>
+	<div class="field">
+		<label for="FIELD_NAME">FIELD_TITLE</label>
+		<div class="input-div">
+			<input placeholder="FIELD_TITLE" type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
+			<input type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
+			<div id="error-text" class="ui basic red pointing prompt label transition hidden"></div>
+		</div>
+		<span id="help-text" class="help-block"></span>
 	</div>
 </div>

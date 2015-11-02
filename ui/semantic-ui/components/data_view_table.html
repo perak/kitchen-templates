@@ -1,5 +1,5 @@
 <template name="TEMPLATE_NAME">
-	<table id="dataview-table" class="ui striped table">
+	<table id="dataview-table" class="ui very basic unstackable table">
 		<thead id="dataview-table-header">
 			<tr id="dataview-table-header-row">
 			</tr>
@@ -9,20 +9,19 @@
 
 		</tbody>
 	</table>
-<div class="ui small modal delete">
-  <div class="header"> Delete </div>
-	<div class="image content">
-  <div class="description"> Delete? Are you sure? </div>
-</div>
-	<div class="actions">
-	      <div class="ui red cancel inverted button">
-	        <i class="remove icon"></i>No
-	      </div>
-	      <div class="ui green ok inverted button">
-	        <i class="checkmark icon"></i>Yes
-	      </div>
-	 </div>
-</div>
+
+	<div class="ui small modal delete">
+		<div class="header">
+			Delete
+		</div>
+		<div class="image content">
+			<div class="description">Delete? Are you sure?</div>
+		</div>
+		<div class="actions">
+			<div class="ui green ok button">Yes</div>
+			<div class="ui basic cancel button">No</div>
+		</div>
+	</div>
 </template>
 
 <th id="dataview-table-header-cell">

@@ -24,16 +24,10 @@ Template.TEMPLATE_NAME.rendered = function() {
 		});
 	});
 
-//	$("select[data-role='tagsinput']").tagsinput();
-	$(".bootstrap-tagsinput").addClass("form-control");
 	$("input[autofocus]").focus();
 };
 
 Template.TEMPLATE_NAME.events({
-	"click #form-submit-button": function(e, t) {
-		e.preventDefault();
-		$(".form_TEMPLATE_NAME").submit();
-	},
 	"submit": function(e, t) {
 		e.preventDefault();
 		pageSession.set("INFO_MESSAGE_VAR", "");

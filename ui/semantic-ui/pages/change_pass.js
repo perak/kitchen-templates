@@ -51,9 +51,9 @@ Template.TEMPLATE_NAME.events({
 			return false;
 		}
 
-		submit_button.button("loading");
+		submit_button.addClass("loading");
 		Accounts.changePassword(old_password, new_password, function(err) {
-			submit_button.button("reset");
+			submit_button.removeClass("loading");
 			if (err) {
 				pageSession.set("errorMessage", err.message);
 				return false;

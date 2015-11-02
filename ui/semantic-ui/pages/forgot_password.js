@@ -21,9 +21,9 @@ Template.TEMPLATE_NAME.events({
 			return false;
 		}
 
-		submit_button.button("loading");
+		submit_button.addClass("loading");
 		Accounts.forgotPassword({email: reset_email}, function(err) {
-			submit_button.button("reset");
+			submit_button.removeClass("loading");
 			if (err)
 				pageSession.set("errorMessage", err.message);
 			else

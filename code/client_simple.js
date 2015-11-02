@@ -62,7 +62,7 @@ Helpers.formatDate = function(date, dateFormat) {
 			date = new Date();
 		}
 		if(date.toUpperCase() == "TODAY") {
-			d = new Date();
+			var d = new Date();
 			date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, 0, 0, 0);
 		}
 	}
