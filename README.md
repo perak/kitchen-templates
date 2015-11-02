@@ -3,7 +3,17 @@ Kitchen Templates
 
 This temporary repository contains template files used by kitchen-CLI to assemble meteor application.
 
-Repository is temporary, it is for contributions related to front-end improvements on bootstrap3, semantic-ui and materialize (until complete kitchen-CLI goes fully open source).
+It is for contributions related to front-end improvements on **bootstrap3**, **semantic-ui** and **materialize** (until complete kitchen-CLI goes fully open source).
+
+Mission
+------- 
+Goal is to make templates good enough, so generator can produce all example applications with "bootstrap3", "materialize" and "semantic-ui" without changing input .json file.
+So, idea is: describe application (create input .json file) and choose your favorite frontend - without modifying your .json file.
+
+Cool - but this currently doesn't work :) Official examples contains "hard-coded" css class names specific to bootstrap3 (for example, in menus we have "nav navbar-nav" etc.).
+
+We are close to this "goal", but there is still some job to be done.
+
 
 Current status:
 ---------------
@@ -16,7 +26,9 @@ Current status:
 What this repository contains?
 ------------------------------
 
-Two top directories:
+When meteor-kitchen is installed, you can find this directory at `~/.meteor-kitchen/templates/` path.
+
+Here, we got two top directories:
 
 - **code**
 - **ui**
@@ -24,7 +36,7 @@ Two top directories:
 
 ### "code" directory
 
-Non-visual, mostly server side code, router code etc.
+Non-visual, mostly server side code, router code etc. The same code is used by all frameworks.
 
 
 ### "ui" directory
@@ -109,15 +121,6 @@ COMPONENT_ID
 Styling guide
 =============
 
-Our mission - goal is to make templates, so generator can produce all example applications with "bootstrap3", "materialize" and "semantic-ui" without changing input .json file.
-So, idea is: describe application (create input .json file) and choose your favorite frontend - without modifying your .json file.
-
-Cool - but this currently doesn't work :) Official examples contains "hard-coded" css class names specific to bootstrap3 (for example, in menus we have "nav navbar-nav" etc.).
-
-We are close to this "goal", but there is still some job to be done.
-
-OK, now, about styling:
-
 **Please try your components to be fully native** without changing their visual look & feel with CSS - as in framework's examples. 
 For example: bootstrap button should look exactly as naked bootstrap button - don't add your "spices" like shadows or something - don't touch basic elements.
 
@@ -129,7 +132,7 @@ If we have generated fully native markup, for example naked bootstrap, then it's
 How to test did you made a good job?
 ====================================
 
-If you are playing with for example "materialize" - try to make "example-invoices" application with "materialize" (modify official example .json files - remove bootstrap specific css class names) and see if everything looks as it should, and is positioned well, is responsive etc.
+If you are playing with for example "materialize" - try to make "example-invoices" application with "materialize" framework (modify official example .json files - remove bootstrap specific css class names) and see if everything looks as it should, and is positioned well, is responsive etc. (don'tforget to clean-build your app if you previously built it with another framework).
 If you are ambitious, try to build all examples (of course, you'll need to modify them - remove bootstrap classes from .json).
 
 
