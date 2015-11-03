@@ -1,6 +1,8 @@
 Template.TEMPLATE_NAME.rendered = function() {
 	/*TEMPLATE_RENDERED_CODE*/
 
+	Materialize.updateTextFields();
+
 	pageSession.set("INFO_MESSAGE_VAR", "");
 	pageSession.set("ERROR_MESSAGE_VAR", "");
 
