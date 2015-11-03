@@ -6,11 +6,11 @@
 
 		<form class="form form_TEMPLATE_NAME" role="form">
 			{{#if errorMessage}}
-				<div class="alert alert-warning">{{errorMessage}}</div>
+			<div class="alert alert-warning">{{errorMessage}}</div>
 			{{/if}}
 
 			{{#if infoMessage}}
-				<div class="alert alert-success">{{infoMessage}}</div>
+			<div class="alert alert-success">{{infoMessage}}</div>
 			{{/if}}
 		</form>
 	</div>
@@ -21,71 +21,71 @@
 
 <div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field col s12">
-		<input type="text" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
-		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+		<input type="text" id="form-FIELD_NAME" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="form-FIELD_NAME">FIELD_TITLE</label>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 
 <div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field col s12">
-		<input type="password" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
-		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+		<input type="password" id="form-FIELD_NAME" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="form-FIELD_NAME">FIELD_TITLE</label>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field col s12">
-		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="form-FIELD_NAME">FIELD_TITLE</label>
 		<i class="material-icons prefix">event_note</i>
-		<input  type="text" name="FIELD_NAME" value="FIELD_VALUE">
+		<input type="text" id="form-FIELD_NAME" name="FIELD_NAME" value="FIELD_VALUE">
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	     <div class="input-field col s12">
-          <input readonly id="FIELD_NAME" value="FIELD_VALUE" type="text">
-					<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
-        </div>
+	<div class="input-field col s12">
+		<input readonly id="form-FIELD_NAME" value="FIELD_VALUE" type="text">
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="form-FIELD_NAME">FIELD_TITLE</label>
+	</div>
 </div>
 
 
 <div id="form-input-markdown" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-    <label for="FIELD_NAME">FIELD_TITLE</label>
-    <div class="input-field col s12">
-        <textarea class="materialize-textarea" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
-    </div>
-        <span id="help-text" class="help-block"></span>
-        <span id="error-text" class="help-block"></span>
+	<label for="form-FIELD_NAME">FIELD_TITLE</label>
+	<div class="input-field col s12">
+		<textarea id="form-FIELD_NAME" class="materialize-textarea" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
+	</div>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<div class="input-field col s12">
-		<textarea class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
-		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+		<textarea id="FIELD_GROUP_CLASS" class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
+		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_GROUP_CLASS">FIELD_TITLE</label>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-radio" class="inline fields form-group FIELD_GROUP_CLASS FIELD_ID">
-	<label for="FIELD_NAME">FIELD_TITLE</label>
-		<div id="form-input-radio-items">
-		</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<label for="form-FIELD_NAME">FIELD_TITLE</label>
+	<div id="form-input-radio-items">
+	</div>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-radio-item" class="field">
 	<div class="ui radio checkbox">
-	<input id="radio-ITEM_VALUE" type="radio" value="ITEM_VALUE" group="FIELD_NAME" name="FIELD_NAME">
-	<label for="radio-ITEM_VALUE">ITEM_TITLE</label>
+		<input id="form-ITEM_VALUE" type="radio" value="ITEM_VALUE" group="FIELD_NAME" name="FIELD_NAME">
+		<label for="form-ITEM_VALUE">ITEM_TITLE</label>
 	</div>
 </div>
 
@@ -94,21 +94,21 @@
 		<div id="form-input-checkbox-items">
 		</div>
 	</div>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-checkbox-item" class="ui checkbox">
-		<input type="checkbox" value="ITEM_VALUE" name="FIELD_NAME">
-		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_NAME">FIELD_TITLE</label>
+	<input type="checkbox" id="form-FIELD_NAME" value="ITEM_VALUE" name="FIELD_NAME">
+	<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="form-FIELD_NAME">FIELD_TITLE</label>
 </div>
 
 <div id="form-input-select" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-		<select class="dropdown" name="FIELD_NAME">
-			<option value="" disabled selected>Choose FIELD_TITLE</option>
-		</select>
-		<span id="help-text" class="help-block"></span>
-		<span id="error-text" class="help-block"></span>
+	<select class="dropdown" name="FIELD_NAME">
+		<option value="" disabled selected>Choose FIELD_TITLE</option>
+	</select>
+	<span id="help-text" class="help-block"></span>
+	<span id="error-text" class="help-block"></span>
 </div>
 
 <option id="form-input-select-item" value="ITEM_VALUE">
@@ -124,26 +124,26 @@
 </div>
 
 <div id="form-input-crud" class="FIELD_GROUP_CLASS FIELD_ID">
-	<label class="active" for="FIELD_NAME">FIELD_TITLE</label>
+	<label class="active" for="form-FIELD_NAME">FIELD_TITLE</label>
 	<div class="input-div">
 		<table class="table table-striped">
 			<thead>
-				<tr class="crud-table-controls">
-					<td colspan="CRUD_FIELD_COUNT">
-						<button type="button" class="btn" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><i class="materialize-icons left">control_point</i> CRUD_INSERT_BUTTON_TITLE</button>
-					</td>
-				</tr>
-				{{#if FIELD_CRUD_ITEMS}}
-					<tr class="crud-table-header">
-					</tr>
-				{{/if}}
+			<tr class="crud-table-controls">
+				<td colspan="CRUD_FIELD_COUNT">
+					<button type="button" class="btn" data-toggle="modal" data-target="#CRUD_INSERT_FORM_CONTAINER_ID"><i class="materialize-icons left">control_point</i> CRUD_INSERT_BUTTON_TITLE</button>
+				</td>
+			</tr>
+			{{#if FIELD_CRUD_ITEMS}}
+			<tr class="crud-table-header">
+			</tr>
+			{{/if}}
 			</thead>
 
 			<tbody>
-				{{#each FIELD_CRUD_ITEMS}}
-					<tr class="crud-table-row">
-					</tr>
-				{{/each}}
+			{{#each FIELD_CRUD_ITEMS}}
+			<tr class="crud-table-row">
+			</tr>
+			{{/each}}
 			</tbody>
 		</table>
 		<span id="help-text" class="help-block"></span>
@@ -161,13 +161,13 @@
 </div>
 
 <div id="form-input-file" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-    <div class="input-field col s12">
-    <label for="FIELD_NAME">FIELD_TITLE</label>
-    <div class="input-div">
-        <input type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
-        <input type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
-    </div>
-        <span id="help-text" class="help-block"></span>
-        <span id="error-text" class="help-block"></span>
+	<div class="input-field col s12">
+		<label for="form-FIELD_NAME">FIELD_TITLE</label>
+		<div class="input-div">
+			<input type="file" id="FIELD_ID" class="file" multiple="false" data-show-upload="false" data-show-caption="true" data-field="FIELD_NAME">
+			<input type="hidden" id="form-FIELD_NAME" name="FIELD_NAME" value="FIELD_VALUE">
+		</div>
+		<span id="help-text" class="help-block"></span>
+		<span id="error-text" class="help-block"></span>
 	</div>
 </div>
