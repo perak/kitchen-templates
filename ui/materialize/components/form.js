@@ -1,6 +1,7 @@
 Template.TEMPLATE_NAME.rendered = function() {
 	/*TEMPLATE_RENDERED_CODE*/
 
+	$('select').material_select();
 	Materialize.updateTextFields();
 
 	pageSession.set("INFO_MESSAGE_VAR", "");
