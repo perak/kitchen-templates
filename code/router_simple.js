@@ -8,6 +8,7 @@ Router.onBeforeAction(function() {
 	// loading indicator here
 	if(!this.ready()) {
 		$("body").addClass("wait");
+		this.render("loading");
 	} else {
 		$("body").removeClass("wait");
 		this.next();

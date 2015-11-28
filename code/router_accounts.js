@@ -91,6 +91,7 @@ this.routeGranted = function(routeName) {
 
 Router.ensureLogged = function() {
 	if(Meteor.userId() && (!Meteor.user() || !Meteor.user().roles)) {
+		this.render('loading');
 		return;
 	}
 
@@ -112,6 +113,7 @@ Router.ensureLogged = function() {
 
 Router.ensureNotLogged = function() {
 	if(Meteor.userId() && (!Meteor.user() || !Meteor.user().roles)) {
+		this.render('loading');
 		return;
 	}
 
@@ -127,6 +129,7 @@ Router.ensureNotLogged = function() {
 // called for pages in free zone - some of pages can be restricted
 Router.ensureGranted = function() {
 	if(Meteor.userId() && (!Meteor.user() || !Meteor.user().roles)) {
+		this.render('loading');
 		return;
 	}
 
@@ -146,6 +149,7 @@ Router.waitOn(function() {
 Router.onBeforeAction(function() {
 	// loading indicator here
 	if(!this.ready()) {
+		this.render('loading');
 		$("body").addClass("wait");
 	} else {
 		$("body").removeClass("wait");
