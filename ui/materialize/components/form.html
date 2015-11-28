@@ -20,56 +20,56 @@
 <input id="form-input-hidden" type="hidden" name="FIELD_NAME" value="FIELD_VALUE">
 
 <div id="form-input-text" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<input type="text" id="FIELD_ID" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_ID">FIELD_TITLE</label>
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
 
 
 <div id="form-input-password" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<input type="password" id="FIELD_ID" name="FIELD_NAME" value="FIELD_VALUE" class="form-control">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_ID">FIELD_TITLE</label>
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-datepicker" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_ID">FIELD_TITLE</label>
 		<i class="material-icons prefix">event_note</i>
 		<input type="text" id="FIELD_ID" name="FIELD_NAME" value="FIELD_VALUE">
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-read-only" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<input readonly id="FIELD_ID" value="FIELD_VALUE" type="text">
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_ID">FIELD_TITLE</label>
-	</div>
+	</p>
 </div>
 
 
 <div id="form-input-markdown" class="form-group FIELD_GROUP_CLASS FIELD_ID">
 	<label for="FIELD_ID">FIELD_TITLE</label>
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<textarea id="FIELD_ID" class="materialize-textarea" rows=10 name="FIELD_NAME">FIELD_VALUE</textarea>
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
 
 <div id="form-input-textarea" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="input-field col s12">
 		<textarea id="FIELD_GROUP_CLASS" class="materialize-textarea" name="FIELD_NAME">FIELD_VALUE</textarea>
 		<label class="{{#if FIELD_VALUE_RAW}}active{{/if}}" for="FIELD_GROUP_CLASS">FIELD_TITLE</label>
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
@@ -83,17 +83,17 @@
 </div>
 
 <div id="form-input-radio-item" class="field">
-	<div class="ui radio checkbox">
+	<p class="ui radio checkbox">
 		<input id="form-ITEM_VALUE" type="radio" value="ITEM_VALUE" group="FIELD_NAME" name="FIELD_NAME">
 		<label for="form-ITEM_VALUE">ITEM_TITLE</label>
-	</div>
+	</p>
 </div>
 
 <div id="form-input-checkbox" class="form-group FIELD_GROUP_CLASS FIELD_ID">
-	<div class="input-field col s12">
+	<p class="col s12">
 		<div id="form-input-checkbox-items">
 		</div>
-	</div>
+	</p>
 	<span id="help-text" class="help-block"></span>
 	<span id="error-text" class="help-block"></span>
 </div>
@@ -116,11 +116,11 @@
 </option>
 
 <div id="form-input-submit">
-	<div class="input-field col s12 submit-div">
+	<p class="input-field col s12 submit-div">
 		<button id="form-submit-button" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">check</i>SUBMIT_BUTTON_TITLE</button>
 		<a href="#" id="form-cancel-button" class="btn">CANCEL_BUTTON_TITLE</a>
 		<a href="#" id="form-close-button" class="btn green">CLOSE_BUTTON_TITLE</a>
-	</div>
+	</p>
 </div>
 
 <div id="form-input-crud" class="FIELD_GROUP_CLASS FIELD_ID">
