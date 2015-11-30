@@ -27,17 +27,26 @@ Template.TEMPLATE_NAME.events({
 
 	"click #delete-button": function(e, t) {
 		e.preventDefault();
-		var me = this;
-		  $('.modal').openModal({
-			  dismissible: true, // Modal can be dismissed by clicking outside of the modal
-			  opacity: .5, // Opacity of modal background
-			  in_duration: 300, // Transition in duration
-			  out_duration: 200, // Transition out duration
-			  ready: function() { }, // Callback for Modal open
-			  complete: function(e) { console.log(e);/*COLLECTION_VAR.remove({ _id: me._id });*/ } // Callback for Modal close
-			});
+
+		var me = this,
+			el = $('.modal');
+
+		el.openModal({
+			dismissible: true, // Modal can be dismissed by clicking outside of the modal
+			opacity: .5, // Opacity of modal background
+			in_duration: 300, // Transition in duration
+			out_duration: 200, // Transition out duration
+			ready: function() {
+				el.find('.modal-confirm').on('click', function() {
+					COLLECTION_VAR.remove({ _id: me._id });
+				});
+			}, // Callback for Modal open
+			complete: function() {  } // Callback for Modal close
+		});
+
 		return false;
 	},
+
 	"click #edit-button": function(e, t) {
 		e.preventDefault();
 		/*EDIT_ROUTE*/
