@@ -1,5 +1,5 @@
 <template name="TEMPLATE_NAME">
-	<table id="dataview-table" class="ui very basic unstackable table">
+	<table id="dataview-table" class="ui very basic stackable table ">
 		<thead id="dataview-table-header">
 			<tr id="dataview-table-header-row">
 			</tr>
@@ -12,14 +12,14 @@
 
 	<div class="ui small modal delete">
 		<div class="header">
-			Delete
+			{{_ 'Delete'}}
 		</div>
 		<div class="image content">
-			<div class="description">Delete? Are you sure?</div>
+			<div class="description">{{_ 'Delete? Are you sure?'}}</div>
 		</div>
 		<div class="actions">
-			<div class="ui green ok button">Yes</div>
-			<div class="ui basic cancel button">No</div>
+			<div class="ui green ok button">{{_ 'Yes'}}</div>
+			<div class="ui basic cancel button">{{_ 'No'}}</div>
 		</div>
 	</div>
 </template>
