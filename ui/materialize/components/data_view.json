@@ -1,6 +1,0 @@
-{
-	"packages": {
-		"meteor": ["reactive-dict"],
-		"mrt"   : []
-	}
-}

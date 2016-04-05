@@ -1,9 +1,0 @@
-{
-	"packages": {
-		"meteor": ["less"],
-		"mrt"   : []
-	},
-	"copy_files": [
-		{ "source": "TEMPLATE_UI_DIR/bootstrap3-less/", "dest": "CLIENT_STYLES_DIR/bootstrap3-less/" }
-	]
-}
