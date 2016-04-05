@@ -14,7 +14,7 @@ Template.TEMPLATE_NAME.created = function() {
 };
 
 Template.TEMPLATE_NAME.events({
-	'submit #register_form' : function(e, t) {
+	'submit #register_form': function(e, t) {
 		e.preventDefault();
 
 		var submit_button = $(t.find(":submit"));
@@ -22,18 +22,27 @@ Template.TEMPLATE_NAME.events({
 		var register_name = t.find('#register_name').value.trim();
 		var register_email = t.find('#register_email').value.trim();
 		var register_password = t.find('#register_password').value;
+		
+		var register_terms = t.find('#register_terms').checked;
+		
+		// var text = event.target.register_terms.checked;
+		 
+		if (register_terms == false) {
+			pageSession.set("errorMessage", "You need to accept the Terms of Service if you want to use this service.");
+			t.find('#register_terms').focus();
+			return false;
+		}
+
 
 		// check name
-		if(register_name == "")
-		{
+		if (register_name == "") {
 			pageSession.set("errorMessage", "Please enter your name.");
 			t.find('#register_name').focus();
 			return false;
 		}
 
 		// check email
-		if(!isValidEmail(register_email))
-		{
+		if (!isValidEmail(register_email)) {
 			pageSession.set("errorMessage", "Please enter valid e-mail address.");
 			t.find('#register_email').focus();
 			return false;
@@ -41,25 +50,32 @@ Template.TEMPLATE_NAME.events({
 
 		// check password
 		var min_password_len = 6;
-		if(!isValidPassword(register_password, min_password_len))
-		{
+		if (!isValidPassword(register_password, min_password_len)) {
 			pageSession.set("errorMessage", "Your password must be at least " + min_password_len + " characters long.");
 			t.find('#register_password').focus();
 			return false;
 		}
 
+	
 		submit_button.addClass('disabled loading');
-		Accounts.createUser({email: register_email, password : register_password, profile: { name: register_name }}, function(err) {
+		Accounts.createUser({
+			email: register_email,
+			password: register_password,
+			profile: {
+				name: register_name,
+				accepted_tos: register_terms
+			}
+		}, function(err) {
 			submit_button.removeClass('disabled loading');;
-			if(err) {
-				if(err.error === 499) {
+			if (err) {
+				if (err.error === 499) {
 					pageSession.set("verificationEmailSent", true);
-				} else {
+				}
+				else {
 					pageSession.set("errorMessage", err.message);
 				}
 			}
-			else
-			{
+			else {
 				pageSession.set("errorMessage", "");
 				pageSession.set("verificationEmailSent", true);
 			}
@@ -68,9 +84,9 @@ Template.TEMPLATE_NAME.events({
 	},
 
 	"click .go-home": function(e, t) {
-		Router.go("/");
-	}
-	/*EVENTS_CODE*/
+			Router.go("/");
+		}
+		/*EVENTS_CODE*/
 });
 
 Template.TEMPLATE_NAME.helpers({
@@ -78,7 +94,7 @@ Template.TEMPLATE_NAME.helpers({
 		return pageSession.get("errorMessage");
 	},
 	verificationEmailSent: function() {
-		return pageSession.get("verificationEmailSent");
-	}
-	/*HELPERS_CODE*/
+			return pageSession.get("verificationEmailSent");
+		}
+		/*HELPERS_CODE*/
 });

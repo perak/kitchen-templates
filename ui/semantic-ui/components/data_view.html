@@ -27,7 +27,7 @@
 <div id="dataview-controls-search" class="item">
 	{{#if isNotEmpty}}
 	<div class="ui fluid action input">
-		<input id="dataview-search-input" type="text" placeholder="Search...">
+		<input id="dataview-search-input" type="text" placeholder="{{_ 'Search...'}}">
 		<div id="dataview-search-button" class="ui icon button">
 			<i class="search icon"></i>
 		</div>
@@ -41,13 +41,13 @@
 			<div></div>
 		{{else}}
 			<div class="ui buttons">
-				<div id="dataview-export-csv" class="ui button">Export</div>
+				<div id="dataview-export-csv" class="ui button">{{_ 'Export'}}</div>
 				<div class="ui floating dropdown icon button">
 					<i class="dropdown icon"></i>
 					<div class="menu">
-						<div id="dataview-export-csv" class="item">Export to CSV</div>
-						<div id="dataview-export-tsv" class="item">Export to TSV</div>
-						<div id="dataview-export-json" class="item">Export to JSON</div>
+						<div id="dataview-export-csv" class="item">{{_ 'Export to CSV'}}</div>
+						<div id="dataview-export-tsv" class="item">{{_ 'Export to TSV'}}</div>
+						<div id="dataview-export-json" class="item">{{_ 'Export to JSON'}}</div>
 					</div>
 				</div>
 			</div>
