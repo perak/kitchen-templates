@@ -1,0 +1,24 @@
+{
+	"packages": {
+		"meteor": [],
+		"npm": [ 
+			"griddle-react", 
+			"react-dom", 
+			"tcomb", 
+			"tcomb-form", 
+			"react-modal",
+		
+		],
+		"mrt": []
+	},
+	"imports": [
+		"import Dataview from 'griddle-react';",
+		"import ReactDOM from 'react-dom';", 
+		"import t from 'tcomb-form'",
+		"import Modal from 'react-modal';",
+		"import {convertArrayOfObjects} from '/lib/utils/object_utils.js'",
+		"import {downloadLocalResource} from '/client/lib/http_utils.js';",
+	
+	],
+	"copy_files": []
+}
