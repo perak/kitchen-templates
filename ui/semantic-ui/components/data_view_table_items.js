@@ -5,6 +5,7 @@ Template.TEMPLATE_NAME.rendered = function() {
 Template.TEMPLATE_NAME.events({
 	"click td": function(e, t) {
 		e.preventDefault();
+		/*ON_ITEM_CLICKED_CODE*/
 		/*DETAILS_ROUTE*/
 		return false;
 	},
@@ -30,6 +31,7 @@ Template.TEMPLATE_NAME.events({
 		var me = this;
 		$('.ui.small.modal.delete').modal({
 			closable: true,
+			detachable: false,
 			onDeny: function() {
 				return true;
 			},
