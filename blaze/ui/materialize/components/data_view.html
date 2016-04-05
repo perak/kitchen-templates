@@ -1,0 +1,53 @@
+<template name="TEMPLATE_NAME">
+	<div id="COMPONENT_ID" class="COMPONENT_CLASS">
+		<h3><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h3>
+
+		<form class="form">
+			<div id="dataview-controls" class="row">
+			</div>
+		</form>
+
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+				<div class="alert alert-warning">TEXT_IF_NOT_FOUND</div>
+			{{else}}
+				<div id="dataview-data">
+				</div>
+			{{/if}}
+		{{else}}
+			<div class="alert alert-info">TEXT_IF_EMPTY</div>
+		{{/if}}
+	</div>
+</template>
+
+<div id="dataview-controls-insert" class="item col s2 INSERT_BUTTON_CLASS">
+	<div class="input-field col s12">
+	<div  id="dataview-insert-button" class="btn"><i class="material-icons left">control_point</i>INSERT_BUTTON_TITLE</div>
+</div>
+</div>
+
+<div id="dataview-controls-search"  class="item col s4">
+	{{#if isNotEmpty}}
+		<div class="input-field col s12">
+				<i id="dataview-search-button" class="material-icons prefix">search</i>
+				<input id="dataview-search-input" style="margin-bottom:0px;" type="text">
+				<label for="dataview-search-input">Search</label>
+		</div>
+	{{/if}}
+</div>
+
+<div id="dataview-controls-export" class="item col s4">
+	{{#if isNotEmpty}}
+		{{#if isFound}}
+			<div></div>
+		{{else}}
+
+	<a class="dropdown-button btn" href='#' data-activates="dropdown_export">Export</a>
+      <ul id="dropdown_export" class="dropdown-content">
+        <li id="dataview-export-csv" class="item"><i class="edit icon"></i>Export to CSV</li>
+        <li id="dataview-export-tsv" class="item"><i class="delete icon"></i>Export to TSV</li>
+        <li id="dataview-export-json" class="item"><i class="hide icon"></i>Export to JSON</li>
+      </ul>
+		{{/if}}
+	{{/if}}
+</div>

@@ -1,0 +1,9 @@
+{
+	"packages": {
+		"meteor": ["semantic:ui", "flemay:less-autoprefixer"],
+		"mrt"   : []
+	},
+	"copy_files": [
+		{ "source": "TEMPLATE_UI_DIR/semantic-ui/", "dest": "CLIENT_STYLES_FRAMEWORK_DIR/semantic-ui/" }
+	]
+}

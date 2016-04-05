@@ -1,0 +1,8 @@
+{
+	"packages": {
+		"meteor": [],
+		"mrt"   : []
+	},
+	"copy_files": [
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"packages": {
+		"meteor": [],
+		"npm"   : ["marked"],
+		"mrt"   : []
+	},
+	"imports": [
+		"import marked from \"marked\";"
+	],
+	"copy_files": [
+	]
+}

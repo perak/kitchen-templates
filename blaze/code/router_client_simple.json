@@ -1,0 +1,7 @@
+{
+	"templateNameConverter": "upperCamelCase",
+	"routeControllerNameConverter": "upperCamelCase",
+	"layoutTemplate": "layout",
+	"notFoundTemplate": "notFound",
+	"loadingTemplate": "loading"
+}

@@ -1,0 +1,31 @@
+{
+	"packages": {
+		"meteor": [
+			"kadira:flow-router",
+			"react-meteor-data",
+			"reactive-dict",
+			"meteorhacks:picker",
+			"check",
+			"random",
+			"http",
+			"email",
+			"spiderable",
+			"ejson",
+			"natestrauser:font-awesome",
+			"matb33:collection-hooks"
+		],
+		"npm": [
+			"react",
+			"react-dom",
+			"react-mounter",
+			"react-addons-pure-render-mixin"
+		],
+		"mrt": []
+	},
+	"copy_files": [
+		{ "source": "TEMPLATE_CODE_DIR/string_utils.js", "dest": "BOTH_LIB_DIR/string_utils.js" },
+		{ "source": "TEMPLATE_CODE_DIR/object_utils.js", "dest": "BOTH_LIB_DIR/object_utils.js" },
+		{ "source": "TEMPLATE_CODE_DIR/http_utils.js",   "dest": "CLIENT_LIB_DIR/http_utils.js" },
+		{ "source": "TEMPLATE_CODE_DIR/router_utils.js",   "dest": "CLIENT_LIB_DIR/router_utils.js" }
+	]
+}

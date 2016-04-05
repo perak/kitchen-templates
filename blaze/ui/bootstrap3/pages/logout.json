@@ -1,0 +1,6 @@
+{
+	"packages": {
+		"meteor": ["accounts-base"],
+		"mrt"   : []
+	}
+}

@@ -1,0 +1,53 @@
+<template name="TEMPLATE_NAME">
+	<div id="COMPONENT_ID" class="COMPONENT_CLASS">
+		<h2 id="component-title"><span id="component-title-icon" class="COMPONENT_TITLE_ICON_CLASS"></span>COMPONENT_TITLE</h2>
+
+		<form id="dataview-controls" class="form-inline">
+		</form>
+
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+				<div class="alert alert-warning">TEXT_IF_NOT_FOUND</div>
+			{{else}}
+				<div id="dataview-data">
+				</div>
+			{{/if}}
+		{{else}}
+			<div class="alert alert-info">TEXT_IF_EMPTY</div>
+		{{/if}}
+	</div>
+</template>
+
+<div id="dataview-controls-insert" class="form-group INSERT_BUTTON_CLASS">
+	<button type="submit" id="dataview-insert-button" class="btn btn-success"><span class="fa fa-plus"></span> INSERT_BUTTON_TITLE</button>
+</div>
+
+<div id="dataview-controls-search">
+	{{#if isNotEmpty}}
+		<div id="dataview-controls-search-group" class="form-group">
+			<label class="sr-only" for="search">Search</label>
+			<input type="text" class="form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+			<button type="button" id="dataview-search-button" class="btn btn-primary"><span class="fa fa-search"></span></button>
+		</div>
+	{{/if}}
+</div>
+
+<div id="dataview-controls-export" class="form-group">
+	{{#if isNotEmpty}}
+		{{#if isFound}}
+			<div></div>
+		{{else}}
+			<div class="btn-group">
+				<button type="button" class="btn btn-default" id="dataview-export-default">Export</button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="dataview-export-csv">Export to CSV</a></li>
+					<li><a href="#" id="dataview-export-tsv">Export to TSV</a></li>
+					<li><a href="#" id="dataview-export-json">Export to JSON</a></li>
+				</ul>
+			</div>
+		{{/if}}
+	{{/if}}
+</div>
