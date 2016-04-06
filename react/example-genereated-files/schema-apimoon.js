@@ -6,22 +6,25 @@ import t from 'tcomb-form'
 
 // https://github.com/gcanti/tcomb-form/blob/master/GUIDE.md
 
-const ApimoonSchema = t.struct({
-  _id: t.maybe( t.String ),
-  name: t.String, // a required string
-  left: t.struct({
-    name: t.String,
-    code: t.String
-  }),
-  middle: t.struct({
-    name: t.String,
-    code: t.String
-  }),
-  right: t.struct({
-    name: t.String,
-    code: t.String
-  }),
-})
+
 
 // Import with  import FormSchema from "schema-apimoon.js";
-export default ApimoonSchema;
+export default function() {
+  const ApimoonSchema = t.struct({
+    _id: t.maybe(t.String),
+    name: t.String, // a required string
+    left: t.struct({
+      name: t.String,
+      code: t.String
+    }),
+    middle: t.struct({
+      name: t.String,
+      code: t.String
+    }),
+    right: t.struct({
+      name: t.String,
+      code: t.String
+    }),
+  });
+  return ApimoonSchema;
+}

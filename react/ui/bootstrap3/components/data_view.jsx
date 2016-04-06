@@ -89,11 +89,13 @@ export const TEMPLATE_NAME = React.createClass({
 					}
 
 				},
+			
 				render() {
-
-
+				
+					const fs = FormSchema();
+					console.log( "fs=",fs);
 					return (<Modal ref="modal" style={CustomStyle} isOpen={this.state.modalIsOpen}><form  onSubmit={this.onSubmit}>
-        						<t.form.Form ref="form" type={FormSchema} options={FormOptions}  value={json}/>
+        						<t.form.Form ref="form" type={fs} options={FormOptions}  value={json}/>
         						<div className="form-group">
           							<button type="submit" className="btn btn-primary">Save</button> <nbsp/>
           							<button onClick={this.closeModal} className="btn btn-secondary">Cancel</button> <nbsp/>
