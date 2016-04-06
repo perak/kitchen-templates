@@ -1,8 +1,9 @@
 Usage:
+```
 cd ~/.meteor-kitchen
 ~/.meteor-kitchen $ mv templates templates-old
 ~/.meteor-kitchen $ git clone https://github.com/ljack/kitchen-templates.git templates
-
+```
 
 Kitchen Templates
 =================
