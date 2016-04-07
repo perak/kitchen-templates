@@ -91,9 +91,10 @@ export const TEMPLATE_NAME = React.createClass({
 				},
 			
 				render() {
-				
+					// get FormSchema for current page
+					console.log("json=",json);
 					const fs = FormSchema();
-					console.log( "fs=",fs);
+					// console.log( "fs=",fs);
 					return (<Modal ref="modal" style={CustomStyle} isOpen={this.state.modalIsOpen}><form  onSubmit={this.onSubmit}>
         						<t.form.Form ref="form" type={fs} options={FormOptions}  value={json}/>
         						<div className="form-group">
